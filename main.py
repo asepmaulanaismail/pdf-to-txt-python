@@ -1,5 +1,14 @@
-import PyPDF2
-import Split
+import os
+try:
+    import PyPDF2
+except ModuleNotFoundError:
+    os.system("pip install PyPDF2") 
+    import PyPDF2
+try:
+    import Split
+except ModuleNotFoundError:
+    os.system("pip install Split") 
+    import Split
 from subprocess import call
 import sys
 
